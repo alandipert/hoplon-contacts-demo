@@ -4,6 +4,8 @@ This project demonstrates a simple contact list application inspired by the [Om 
 
 The application uses local storage of an input cell for reloadability.
 
+<img src="https://dl.dropboxusercontent.com/u/12379861/Screenshots/prophet.png"/>
+
 ## Dependencies
 
 - java 1.7+

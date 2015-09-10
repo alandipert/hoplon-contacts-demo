@@ -1,25 +1,25 @@
 (set-env!
- :dependencies '[[adzerk/boot-cljs          "0.0-3308-0"]
+ :dependencies '[[adzerk/boot-cljs          "1.7.48-3"]
                  [adzerk/boot-reload        "0.3.1"]
-                 [org.clojure/clojurescript "0.0-3308"]
+                 [org.clojure/clojurescript "1.7.48"]
                  [org.clojure/clojure       "1.7.0"]
-                 [tailrecursion/boot-hoplon "0.1.0-SNAPSHOT"]
-                 [tailrecursion/hoplon      "6.0.0-alpha4"]
+                 [hoplon/boot-hoplon        "0.1.5"]
+                 [hoplon                    "6.0.0-alpha9"]
                  [alandipert/storage-atom   "1.2.4"]]
  :resource-paths #{"assets"}
  :source-paths #{"src"})
 
 (require
- '[adzerk.boot-cljs          :refer [cljs]]
- '[adzerk.boot-reload        :refer [reload]]
- '[tailrecursion.boot-hoplon :refer [hoplon prerender]])
+ '[adzerk.boot-cljs   :refer [cljs]]
+ '[adzerk.boot-reload :refer [reload]]
+ '[hoplon.boot-hoplon :refer [hoplon prerender]])
 
 (deftask dev
   "Build for local development."
   []
   (comp
    (watch)
-   (speak)
+   (speak :theme "pillsbury")
    (hoplon)
    (reload)
    (cljs)))

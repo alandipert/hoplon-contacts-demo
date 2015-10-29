@@ -26,7 +26,7 @@
         (button :click #(swap! from disj @contact) "Delete"))))
 
 (defn parse-contact [contact-str]
-  (let [[first middle last :as parts] (string/split contact-str #"\s+")
+  (let [[first middle last :as parts] (filter not-empty (string/split contact-str #"\s+"))
         [first last middle] (if (nil? last) [first middle] [first last middle])
         middle (when middle (string/replace middle "." ""))
         c (if middle (count middle) 0)]

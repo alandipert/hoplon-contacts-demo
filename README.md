@@ -19,6 +19,7 @@ The application uses local storage of an input cell for reloadability.
     $ boot dev
     ```
 
-2. Open http://localhost:8000/ in your browser.
+2. Open [http://localhost:8000/](http://localhost:8000/) in your browser.
+3. Edit and save `src/index.cljs.hl` and the page reloads automatically.
 
 [1]: https://github.com/boot-clj/boot

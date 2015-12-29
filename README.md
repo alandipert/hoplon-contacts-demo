@@ -19,6 +19,6 @@ The application uses local storage of an input cell for reloadability.
     $ boot dev
     ```
 
-2. Open `target/index.html` in your browser
+2. Open http://localhost:8000/ in your browser.
 
 [1]: https://github.com/boot-clj/boot
